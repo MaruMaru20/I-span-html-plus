@@ -1,0 +1,252 @@
+* {
+    font-family: 'Sour Gummy', sans-serif;
+}
+
+h1 {
+    font-family: 'Doto', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(79, 134, 172) !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    background-size:cover;
+    overflow: hidden;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 填滿視窗 */
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保背景完整填滿 */
+}
+
+
+form {
+    position: absolute;
+    width: 100%;
+    max-width: 400px; /* 设置最大宽度 */
+    padding: 20px;
+    bottom: 31%;
+    display: flex;
+    flex-direction: column; /* 让输入框垂直排列 */
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+form input {
+    margin: 5px;
+}
+
+
+
+#ent {
+    position: absolute; 
+    bottom: 10%; 
+    left: 48%; 
+    transform: translateX(-50%); 
+    width: 100%;
+    max-width: 500px;
+    z-index: 4; 
+}
+
+#ent img {
+
+    object-fit: contain; 
+    transition: 0.5s;
+    transform: scale(0.8);
+    z-index: 4; 
+}
+
+#ent img:hover {
+    transform: scale(1.3) translateY(-1rem);
+}
+
+
+
+div .welcome {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    top: 10em;
+    border-radius: 400px;
+}
+
+.welcome {
+    /* opacity: 0.9; */
+    position: absolute; 
+    bottom: 10%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%;
+    max-width: 500px; 
+    object-fit: cover;
+}
+
+div .icon {
+    position: absolute;
+    
+    left: 69%;
+    font-size: 1.3em;
+    color: #162938;
+    line-height: 43px;
+    justify-content: center;
+}
+
+.pro-1 {
+    position: absolute; 
+    bottom: 20%; 
+    left: 80%; 
+    transform: translateX(-50%); 
+    width: 100%;
+    max-width: 500px; 
+    z-index: 4;
+
+}
+
+.par {
+    display: none; /* 初始隱藏元素 */
+    opacity: 0; /* 初始透明 */
+    animation: fadeInUp 5s ease forwards, moveUp 4s 2s forwards; /* fadeInUp後接moveUp動畫 */
+    z-index: 4;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* 初始位置向下偏移30px */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* 最終回到原位置 */
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0); /* 初始位置 */
+    }
+    100% {
+        transform: translateY(-600vh); /* 向上移動直到超出視窗 */
+    }
+}
+
+/* 讓元素顯示出來並觸發動畫 */
+.par.show {
+    display: block; /* 顯示元素 */
+}
+
+
+.new-image {
+    position: absolute; /* 確保圖片位置可控 */
+    top: 50%; /* 新圖片出現在父容器中間 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 居中對齊 */
+    opacity: 0; /* 初始為不可見 */
+    animation: fadeIn .5s ease forwards; /* 漸顯動畫 */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.extra-background {
+    display: none; /* 初始隱藏元素 */
+    opacity: 0; /* 初始透明 */
+}
+
+.extra-background.show {
+    display: block; /* 顯示元素 */
+    opacity: 1; /* 初始透明 */
+    animation: fadeIn 2.75s ease forwards; /* 漸顯並上移動畫 */
+}
+
+.extra-background #add-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 填滿視窗 */
+    z-index: -1;
+    overflow: hidden;
+    z-index: 3;
+    opacity: 0;
+    animation: fadeOut 2.75s ease forwards; /* 漸顯動畫 */
+}
+
+#add-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保背景完整填滿 */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*---------------螢火蟲(飄落)-------------------*/
+
+#firefly-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .firefly {
+    position: absolute;
+    width: 20px; 
+    height: 20px; 
+    background-image: url('img/011.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    opacity: 0.8;
+    animation: flicker 2s infinite ease-in-out, move 10s infinite;
+  }
+
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(0, 0); 
+    }
+    100% {
+      transform: translate(calc(100vw - 20px), calc(100vh - 20px)); 
+    }
+  }

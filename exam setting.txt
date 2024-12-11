@@ -1,0 +1,51 @@
+
+內頁套用 bootstrap
+
+nav: 
+navbar使用bs樣式:漢堡
+home: WELCOME
+about:ME INFO
+link:EMTPY ˙ u ˙
+
+
+JS功能:
+輸入提示(alert)
+密碼轉換
+
+CD彈出		=	=	=	=	=	=	  all css
+https://sunbun.neocities.org/about/   https://sunbun.neocities.org/
+web參考>>>>>>main01
+https://popnmusicdatabase.neocities.org/
+interface
+https://kitmeow.neocities.org/
+加菲:
+https://funnyorangecat.neocities.org/
+牛~仔  (互動)
+https://zelkova.neocities.org/
+fur
+https://tuxedodragon.art/?page=home#welcome
+
+
+1.
+function submit button>>>>>>>>>>>>>>>>>>>>>>>>>>
+    document.getElementById('submitButton').addEventListener('click', function(event) {
+      event.preventDefault();
+      
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      
+      if (username === '' || password === '') {
+        alert('tip: there is no real username/password - put whatever you want ^_~');
+      } else {
+
+        window.location.href = 'main.html';
+      }
+    });
+2.
+cancel>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    document.getElementById('cancell').addEventListener('click', function() {
+      // Clear the username and password fields
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+    });

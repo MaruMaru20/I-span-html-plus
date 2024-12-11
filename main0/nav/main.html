@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website With Login And Register</title>
+    <link rel="icon" href="img/favicon.jpg">
+    <link rel="stylesheet" href="mainstyle.css">
+    <script src="register.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+
+<body>
+     <!-- N-A-V -->
+    <header>
+        <img src="img/02.png" class="logo"></img>
+        <nav class="navigation">
+            <a href="#">首頁</a>
+            <a href="#">介紹</a>
+            <a href="#">支持</a>
+
+            <button class="btnLogin-popup">預先註冊</button>
+        </nav>
+    </header>
+    
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+        <div class="form-box login">
+            <h2>登 入</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="text" required>
+                    <label>帳號</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed" id="Pwhide"></ion-icon></span>
+                    <input type="password"  id="UserPw" required>
+                    <label>密碼</label>                    
+                </div>
+                <div class="remember-fogot">
+                    <label for=""><input type="checkbox" >記住帳號</label>
+                    <a href="#">忘記密碼?</a>
+                </div>
+                <button type="submit" class="btn" >登 入</button>
+                <div class="login-register"><P>還沒有帳號? <a href="#" class="register-link">去註冊</a></P>
+                
+                </div>
+            </form>
+        </div> 
+        <div class="form-box register">
+            <h2>註冊</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>帳號</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="text" required>
+                    <label>電子信箱</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed" id="Pwhide"></ion-icon></span>
+                    <input type="password"  id="UserPw" required>
+                    <label>密碼</label>                    
+                </div>
+                <div class="remember-fogot">
+                    <label for=""><input type="checkbox" >使用條款</label>
+                </div>
+                <button type="submit" class="btn" >註冊</button>
+                <div class="login-register"><P>已經 有帳號ㄌ? 
+                    <a href="#" class="login-link">登入</a></P>                
+                </div>
+            </form>
+        </div>       
+    </div>
+    <!-- N-A-V -->
+
+    <div class="extra-background"></div>
+    <div class="content"></div>
+    <div class="person"><img src="img/Raido.png" alt=""></div>
+  
+    <div class="container">
+        <div class="dialog-container">
+            <img src="dialog-box.png" class="dialog-box" alt="">
+            <div class="dialog-text" id="dialog-text"></div>
+            <button id="skip-button" class="skip-button">SKIP</button>
+        </div>
+    </div>
+        
+    <div id="dialog-buttons" class="hidden">
+        <button id="yes-button" class="skip-btn">是</button>
+        <button id="no-button" class="skip-btn">否</button>
+    </div>
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script></script>
+</html>

@@ -1,0 +1,69 @@
+網站
+賣玩偶?
+
+
+
+首頁
+STARS:
+
+
+主頁 (開始參考小將對話條?) 點擊圖片會跳出div在前視窗
+介紹 互動空間(CSS旋轉功能) 人物捧著旋轉條 
+購買(preorder) 支持(co-fi)
+功能: 註冊
+
+
+
+
+
+參考自己
+
+功能 輪播 點擊2下後透明度 0 to 1
+https://www.youtube.com/watch?v=yqaLSlPOUxM&t=5s
+
+盧恩
+https://ym412240.pixnet.net/blog/post/46102725
+
+
+------------------------------------------------PAGE.1
+
+blue sky space stars 
+
+輸入暱稱 > ENTER
+
+------------------------------------------------Front page
+
+body 100vh
+
+
+----interface : super animal roayl pic
+
+add conversation bar ,
+add skip  
+add ent or click to next conversation
+add rido in ease opt 0 to 1 2s
+
+
+conversation bubble: from right>>
+歡迎 ${nick name} 負責引導 旅人 RIDO
+
+介紹 星星
+
+開始:add rido,bubble ease out z index -1 OK
+
+bubble end
+
+add click island to atv cross(CSS) function
+
+when click island show CSS & introduce
+------------------------------------------------Nav bar pop up
+
+
+------------------------------------------------About (RIDO show up again)
+
+------------------------------------------------register(preorder)
+register(preorder): (CSS JS)click space close ,icon set
+
+------------------------------------------------suppout
+linktree(commission(fireer),KO-FI,kickstarter) 
+https://mrmad.com.tw/linktree
