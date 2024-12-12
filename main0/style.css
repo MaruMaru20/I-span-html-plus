@@ -116,7 +116,12 @@ div .icon {
     width: 100%;
     max-width: 500px; 
     z-index: 4;
+    
 
+}
+
+.user-drag {
+    -webkit-user-drag: none;
 }
 
 .par {
@@ -192,6 +197,7 @@ div .icon {
     z-index: 3;
     opacity: 0;
     animation: fadeOut 2.75s ease forwards; /* 漸顯動畫 */
+    
 }
 
 #add-image {

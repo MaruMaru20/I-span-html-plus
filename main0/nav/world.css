@@ -1,0 +1,287 @@
+
+
+
+@import url('https://fonts.cdnfonts.com/css/helzapoppin');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+body {
+    overflow: hidden;
+    background: url(img/img_07398_.png);
+}
+
+
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 30s linear infinite;
+    z-index: 2;
+
+
+    
+}
+
+@keyframes autoRun {
+    from{
+        transform: perspective(1000px) rotateX(-9deg) rotateY(0deg);
+    }
+    to{
+        transform: perspective(1000px) rotateX(-9deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+    rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) 
+    translateZ(550px);
+}
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ------------------------------------------------------------------------ */
+
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: min(2000px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.banner .content h1 {
+    position: absolute;
+    top: 280px;
+    left: 0;
+    font-family: 'poppins';
+    font-size: 12em;
+    line-height: 1em;
+    color: #25283b;
+    position: relative;
+
+}
+
+ .banner .content h1::after {
+    
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+} 
+
+.banner .content .author {
+    position: relative;
+    top: 100px;
+    left: -30px;
+    font-family: 'poppins';
+    text-align: right;
+    font-size: 2em;
+    min-width: 200px;
+    min-height: 600px;
+    color: #d2d2d2;
+}
+
+pre {
+    font-family: 'poppins';
+}
+
+.banner .content h2 {
+    font-size: 3em;
+} 
+
+.banner .content .model {
+    background-image: url(img/Raido.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 110%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+    
+
+} 
+
+
+
+
+
+
+
+.content {
+    opacity: 0; /* 初始透明 */
+    transform: translateY(50px); /* 初始位置向下偏移 */
+    animation: fadeInUp 1.5s ease forwards; 
+    /* transition: opacity 1s ease-out, visibility 0s 1s;  */
+
+}
+
+
+.content {
+
+    animation: fadeInUpContent 1.5s ease forwards; 
+}
+
+
+/* @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); 
+    }
+    100% {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+} */
+
+@keyframes fadeInUpContent {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* 偏移位置 */
+    }
+    100% {
+        opacity: 1; /* 最終透明度為0.8 */
+        transform: translateY(0); /* 回到初始位置 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --nav */
+
+
+@media (max-width: 768px) {
+    .banner .content .model {
+        /* background-size: contain;  */
+        height: 70vh; /* 根據內容高度調整 */
+        transition: all 0.5s ease-in-out;
+    }
+
+    .banner .content h1 {
+        font-size: 8em; /* 調整標題字型大小 */
+ 
+        top: 780px;
+        
+    }
+
+    .banner .content .author {
+        /* font-size: .1em;  */
+        opacity: 0;
+    }
+
+    pre  {
+
+        display: none;
+        
+    }
+ 
+
+
+
+    .banner .slider {
+
+        transform: perspective(500px);
+            
+    }
+    
+    @keyframes autoRun {
+        from{
+            transform: perspective(500px) rotateX(-9deg) rotateY(0deg);
+        }
+        to{
+            transform: perspective(500px) rotateX(-9deg) rotateY(360deg);
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px)  {
+    .banner .content .model {
+        /* background-size: contain; */
+        height: 75vh;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .banner .content h1 {
+        font-size: 6em;
+        left: 0;
+    }
+
+    .banner .content .author {
+        font-size: 1.1em;
+        top: 350px;
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    .banner .content .model {
+        /* background-size: cover; */
+        height: 75vh; /* 依據需求設置 */
+    }
+
+    .banner .content h1 {
+        font-size: 8em;
+
+    }
+
+    .banner .content .author {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1600px) {
+    .banner .content .model {
+        /* background-size: cover; */
+        height: 75vh; /* 依據需求設置 */
+    }
+
+    .banner .content h1 {
+        font-size: 12em;
+        left: 0;
+    }
+
+
+}

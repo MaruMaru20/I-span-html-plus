@@ -101,7 +101,7 @@ function showNextDialog() {
         setTimeout(() => {
             typeText(dialogTexts[currentDialogIndex]);
             currentDialogIndex++;
-        }, 300);  // 延遲 1.25 秒
+        }, 300);  // 延遲
     } else {
         endDialog();
     }
@@ -170,7 +170,7 @@ function handleNoClick() {
     noButton.disabled = true;
     dialogButtons.classList.add("hidden");
     isResetting = false;
-    endDialog();
+    skipDialog();
 }
 
 showNextDialog();
