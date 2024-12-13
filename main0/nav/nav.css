@@ -1,38 +1,102 @@
 
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    
-    background-size: cover;
-    background-position: top;
-    overflow: hidden;
-    
-}
+
 
 
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: -60px;
     width: 100%;
-    padding: 6px 20px; /* 調整間距 */
+    height: 50px;
+    padding: 20px 50px; /* 調整間距 */
     background: url('img/nav.png') no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* 讓內容兩邊對齊 */
     align-items: center; /* 垂直置中 */
     z-index: 99;
-    max-height: 60px;
+
 }
+
+.navigation {
+    display: flex;
+    flex-wrap: nowrap; /* 不允許換行 */
+    gap: 140px; /* 元素間距 */
+    align-items: center; /* 確保按鈕與文字垂直對齊 */
+}
+
+.navigation a {
+    display: inline-block; /* 確保每個連結是行內塊元素 */
+    white-space: nowrap; /* 防止文字換行 */
+    text-decoration: none; /* 移除下劃線 */
+    color: white; /* 自訂文字顏色 */
+}
+
+/* 預設隱藏漢堡選單 */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 媒體查詢處理漢堡選單 */
+@media (max-width: 768px) {
+    .navigation {
+        display: none; /* 初始隱藏導航 */
+        flex-direction: column; /* 垂直排列 */
+        gap: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        position: absolute;
+        top: 70px; 
+        right: 0;
+        width: 100%;
+        z-index: 99;
+    }
+
+    .navigation.ok {
+        display: flex; /* 點擊漢堡時顯示 */
+    }
+
+    .hamburger-menu {
+        display: block; /* 小螢幕顯示漢堡按鈕 */
+    }
+
+    .btnLogin-popup {
+        position: relative;
+        left: 45px;
+    }
+
+    .content {
+        position: relative;
+        left: 500px;
+    }
+    .person img {
+        position: absolute;
+        left: -500px;
+        top: -230px;
+
+
+    }
+    header {
+        height: 40px;
+    }
+
+}
+
+
+
 
 header img{
     position: relative;
-    top: 6px;
-    left: -220px;
+    top:7px;
+    left: 30px;
+   
 }
 
 
@@ -99,9 +163,12 @@ header img{
 
 .wrapper {
     position: absolute;
+    top: 30%;
+    left: 40%;
     width: 400px;
     height: 440px;
-    background: black;
+    background: transparent;
+    transform: translate(-50%, -50%); /* 修正偏移 */
     border: 2px solid rgb(172, 172, 172);
     border-radius: 20px;
     backdrop-filter: blur(5px);
@@ -279,5 +346,10 @@ header img{
 .login-register a {
     margin-left: 100px;
 }
+
+
+
+
+
 
 

@@ -4,124 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     <link rel="stylesheet" href="world.css">
-    <!-- <link rel="stylesheet" href="nav.css"> -->
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
+    <script src="world.js"></script>
+    <link rel="stylesheet" href="nav.css">
 
-    <title>Document</title>
+    <title>介紹</title>
 </head>
 
 
 <body>
-        <!-- N-A-V -->
-        <!-- <header>
-            <a href="../index.html">
-            <img src="img/favc2.png" class="logo"></img>
-            </a>
-            <nav class="navigation">
-                <a href="#">首頁</a>
-                <a href="world.html">介紹</a>
-                <a href="#">支持</a>
+     <!-- N-A-V -->
+     <header>
+        <a href="../index.html">
+            <img src="img/LOGO4.png" class="logo"></img>
+        </a>
+        <nav class="navigation">
+            <a href="main.html">主頁</a>
+            <a href="world.html">介紹</a>
+            <a href="#" class="support-link">支持</a>
+            <button class="btnLogin-popup">預先註冊</button>
+        </nav>
+        <button class="hamburger-menu">☰</button> <!-- 漢堡按鈕 -->
+    </header>
     
-                <button class="btnLogin-popup">預先註冊</button>
-            </nav>
-        </header>
-        
-        <div class="wrapper">
-            <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
-            <div class="form-box login">
-                <h2>登 入</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="text" required>
-                        <label>帳號</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed" id="Pwhide"></ion-icon></span>
-                        <input type="password"  id="UserPw" required>
-                        <label>密碼</label>                    
-                    </div>
-                    <div class="remember-fogot">
-                        <label for=""><input type="checkbox" >記住帳號</label>
-                        <a href="#">忘記密碼?</a>
-                    </div>
-                    <button type="submit" class="btn" >登 入</button>
-                    <div class="login-register"><P>還沒有帳號? <a href="#" class="register-link">去註冊</a></P>
-                    
-                    </div>
-                </form>
-            </div> 
-            <div class="form-box register">
-                <h2>註冊</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="person"></ion-icon></span>
-                        <input type="text" required>
-                        <label>帳號</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="text" required>
-                        <label>電子信箱</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed" id="Pwhide"></ion-icon></span>
-                        <input type="password"  id="UserPw" required>
-                        <label>密碼</label>                    
-                    </div>
-                    <div class="remember-fogot">
-                        <label for=""><input type="checkbox" >使用條款</label>
-                    </div>
-                    <button type="submit" class="btn" >註冊</button>
-                    <div class="login-register"><P>已經 有帳號ㄌ? 
-                        <a href="#" class="login-link">登入</a></P>                
-                    </div>
-                </form>
-            </div>       
-        </div> -->
-
-    <style>
 
 
+    
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+        <div class="form-box login">
+            <h2>登 入</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="text" required>
+                    <label>帳號</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed" id="Pwhide"></ion-icon></span>
+                    <input type="password"  id="UserPw" required>
+                    <label>密碼</label>                    
+                </div>
+                <div class="remember-fogot">
+                    <label for=""><input type="checkbox" >記住帳號</label>
+                    <a href="#">忘記密碼?</a>
+                </div>
+                <button type="submit" class="btn" >登 入</button>
+                <div class="login-register"><P>還沒有帳號? <a href="#" class="register-link">去註冊</a></P>
+                
+                </div>
+            </form>
+        </div> 
+        <div class="form-box register">
+            <h2>註冊</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>帳號</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="text" required>
+                    <label>電子信箱</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed" id="Pwhide"></ion-icon></span>
+                    <input type="password"  id="UserPw" required>
+                    <label>密碼</label>                    
+                </div>
+                <div class="remember-fogot">
+                    <label for=""><input type="checkbox" >使用條款</label>
+                </div>
+                <button type="submit" class="btn" >註冊</button>
+                <div class="login-register"><P>已經 有帳號ㄌ? 
+                    <a href="#" class="login-link">登入</a></P>                
+                </div>
+            </form>
+        </div>       
+    </div>
+    <!-- N-A-V -->
 
-    </style>
+<!-- LINKTREE -->
+<div class="LinkThree" >
+    <h1>Links</h1>
+    <br>
+    <center>
+    <div>
+        <span class="Link-close"><ion-icon name="close-outline"></ion-icon></span>
+    </div>
+        <a class="one" href=""><img src="" >TWITTER</a><br>
+    <a class="one" href=""><img src="" >TWITCH</a><br>
+    <a class="one" href=""><img src="" >PATREON</a><br>
+    <a class="one" href=""><img src="" >TRELLO</a><br>
+    <a class="one" href=""><img src="" >INSTAGRAM</a><br>
+    <a class="one" href=""><img src="" >NEOCITIES</a><br>
+    </center>
+</div>
+ <!-- LINKTREE -->
 
     <div class="banner">
         <div class="slider" id="slider" style="--quantity: 10">
-            <div class="item" style="--position: 1"><img src="img/20230820185834.gif" alt=""></div>
-            <div class="item" style="--position: 2"><img src="img/racoon.gif" alt=""></div>
-            <div class="item" style="--position: 3"><img src="img/20230826103519.gif" alt=""></div>
-            <div class="item" style="--position: 4"><img src="img/20231231104751.gif" alt=""></div>
-            <div class="item" style="--position: 5"><img src="img/20230826103334.gif" alt=""></div>
-            <div class="item" style="--position: 6"><img src="img/20230820185834.gif" alt=""></div>
-            <div class="item" style="--position: 7"><img src="img/20230826103334.gif" alt=""></div>
-            <div class="item" style="--position: 8"><img src="img/20231231104751.gif" alt=""></div>
-            <div class="item" style="--position: 9"><img src="img/20230826103519.gif" alt=""></div>
-            <div class="item" style="--position: 10"><img src="img/20231231104751.gif" alt=""></div>
+            <div class="item" style="--position: 1"><img src="img/Raido1.png" alt=""></div>
+            <div class="item" style="--position: 2" ><img src="img/Ihwaz.png" alt=""></div>
+            <div class="item" style="--position: 3"><img src="img/algiz.png" alt=""></div>
+            <div class="item" style="--position: 4"><img src="img/kemono.png" alt=""></div>
+            <div class="item" style="--position: 5"><img src="img/05.png" alt=""></div>
+            <div class="item" style="--position: 6"><img src="img/06.png" alt=""></div>
+            <div class="item" style="--position: 7"><img src="img/07.png" alt=""></div>
+            <div class="item" style="--position: 8"><img src="img/08.png" alt=""></div>
+            <div class="item" style="--position: 9"><img src="img/09.png" alt=""></div>
+            <div class="item" style="--position: 10"><img src="img/10.png" alt=""></div>
         </div>
+        <div class="extra"></div>
+        
         <div class="content">
-            <h1 data-content="測試beta">
-                測試beta
+            <h1 data-content="找尋..真理?">
+                找尋..真理?
             </h1>
+            
             <div class="author">
-                <h2 id="info">介紹</h2>
                 
-                <pre class="info">劇情
+                <h2 class="info">石像</h2>
+                
+                <pre class="info">　‵̶҈‵̴̷‵̴‵҈
                     
-                    略略略略略略略略略
-                    略略略略略略略略略
-                    略略略略略略略略略
-                    略略略略略略略略略</pre>
+                    
+                    `҈̧̦͔̯̫̪̗̐͑͐̂͡ͅ `̴̨͈̳͇̰͓͇̠̯̔̉͞`҈̠̖̦͕̩̠̳̱҇́͑̃̅̓͑̀̚͢`̷̧̣̦͓̤̑͊́̄̏̇̆̔͝`̵̨͈̰̰̘̀̓͗͑͛̓͞`҉̡͕̩͇̦̳҇͑̿̋̋`҉̜̜͚̬̂̊̈́́̈́͒͢͞ `̴̛̜̗̰̙̖͖̪͈͊̅͒͑͜ `̷̨͕̝͉̟͕͗̔͆̊̓̍͞ `̶̡̦̭̰̖̰̯̊͑͊̏̀̇͊̕ 
+                    
+                    </pre>
             </div>
             <div class="model"></div>
+            
         </div>
         
     </div>
     
+    <script>
+        
+// 選取 "支持" 按鈕和彈出框的相關元素
+const supportLink = document.querySelector('.support-link'); // 綁定 "支持"
+const linkOpen = document.querySelector('.LinkThree'); // 綁定彈出框
+const linkClose = document.querySelector('.Link-close'); // 關閉按鈕
+
+// 點擊 "支持" 開啟彈出框
+supportLink.addEventListener('click', (event) => {
+    event.preventDefault(); // 阻止默認行為（如跳轉）
+    linkOpen.classList.add('open'); // 顯示彈出框
+});
+
+// 點擊關閉按鈕隱藏彈出框
+linkClose.addEventListener('click', () => {
+    linkOpen.classList.remove('open');
+});
+
+// 點擊外部區域關閉彈出框
+document.addEventListener('click', (event) => {
+    if (!linkOpen.contains(event.target) && event.target !== supportLink) {
+        linkOpen.classList.remove('open');
+    }
+});
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navigation = document.querySelector('.navigation');
+
+// 點擊漢堡選單顯示或隱藏導航欄
+hamburgerMenu.addEventListener('click', () => {
+    navigation.classList.toggle('ok');
+});
+
+// 點擊導航欄項目後關閉導航欄
+const navLinks = document.querySelectorAll('.navigation a'); // 所有導航欄的連結
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navigation.classList.remove('ok'); // 關閉導航欄
+    });
+});
+
+// Reg
+
+
+
+// 密碼
+
+const passwordField = document.getElementById('UserPw');
+const togglePasswordButton = document.getElementById('Pwhide');
+
+togglePasswordButton.addEventListener('click', function() {
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+    // Toggle icon
+    togglePasswordButton.name = togglePasswordButton.name === 'lock-closed' ? 'lock-open-outline' : 'lock-closed';
+});
+//帳號登入註冊
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+
+const btnPopup = document.querySelector('.btnLogin-popup');
+
+const iconClose = document.querySelector('.icon-close');
+
+registerLink.addEventListener('click', ()=> {
+    wrapper.classList.add('active')
+});
+
+loginLink.addEventListener('click', ()=> {
+    wrapper.classList.remove('active')
+});
+
+btnPopup.addEventListener('click', ()=> {
+    wrapper.classList.add('active-popup')
+});
+
+iconClose.addEventListener('click', ()=> {
+    wrapper.classList.remove('active-popup')
+});
+
+document.addEventListener('click', function(event) {
+    const loginPopup = document.querySelector('.wrapper');
+    const loginButton = document.querySelector('.btnLogin-popup');
+    const closeButton = document.querySelector('.icon-close');
+
+    // 如果點擊發生在彈出視窗內部或是點擊了登入按鈕或關閉按鈕，不執行關閉操作
+    if (loginPopup.contains(event.target) || event.target === loginButton || event.target === closeButton) {
+        return;
+    }
+
+    // 點擊了彈出視窗以外的區域，關閉彈出視窗
+    loginPopup.classList.remove('active-popup');
+});
+
+
+    </script>
+
 
     
 </body>
+<style>
 
+</style>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </html>
 

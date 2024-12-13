@@ -16,9 +16,15 @@ body {
     overflow: hidden;
     
 }
+.navigation {
+    display: flex;
+    flex-wrap: nowrap; /* 不允許換行 */
+    gap: 20px; /* 元素間距 */
+    align-items: center; /* 確保按鈕與文字垂直對齊 */
+}
 
 .extra-background {
-    background: url('img/img_07398_.png') no-repeat;
+    background: url('img/bg.png') no-repeat;
     position: absolute;
     top: 0;
     left: 0;
@@ -29,6 +35,7 @@ body {
     background-position: center;
     background-size: cover;
     z-index: -99; /* 確保它在主內容後面 */
+    opacity: 1;
 }
 
 header {
@@ -45,6 +52,68 @@ header {
     z-index: 99;
 }
 
+/* 預設隱藏漢堡選單 */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 媒體查詢處理漢堡選單 */
+@media (max-width: 768px) {
+    .navigation {
+        display: none; /* 初始隱藏導航 */
+        flex-direction: column; /* 垂直排列 */
+        gap: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        position: absolute;
+        top: 70px; /* 調整到 LOGO 下方 */
+        right: 0;
+        width: 100%;
+        z-index: 99;
+        top: 125px;
+    }
+
+    .navigation a {
+        position: relative;
+        right: 125px;
+    }
+
+   
+
+
+    .navigation.ok {
+        display: flex; /* 點擊漢堡時顯示 */
+        
+        
+    }
+
+    .hamburger-menu {
+        display: block; /* 小螢幕顯示漢堡按鈕 */
+    }
+
+    .btnLogin-popup {
+        position: relative;
+        left: 0;
+    }
+
+    .content {
+        position: relative;
+        left: 500px;
+    }
+    .person img {
+        position: absolute;
+        left: -500px;
+        top: -230px;
+
+
+    }
+
+}
 
 
 
@@ -57,14 +126,17 @@ header {
     user-select: none;
 }
 
+
+
 .navigation a {
     position: relative;
     font-size: 1.1em;
     color: #fff;
     text-decoration: none;
+    white-space: nowrap; /* 防止文字換行 */
     font-weight: 500;
    padding: 5px 10px; /* 添加一點內間距 */
-    justify-content:space-between;  margin-left: 130px;
+    justify-content:space-between;  margin-left: 300px;
     
 }
 
@@ -112,7 +184,7 @@ header {
     position: absolute;
     width: 400px;
     height: 440px;
-    background: black;
+    background: transparent;
     border: 2px solid rgb(172, 172, 172);
     border-radius: 20px;
     backdrop-filter: blur(5px);
@@ -199,7 +271,7 @@ header {
     left: 5px;
     transform: translateY(-50%);
     font-size: 1em;
-    color: #6e8ca1;
+    color: #000000;
     font-weight: 500;
     pointer-events: none;
     transition: .5s;
@@ -218,7 +290,7 @@ header {
     border: none;
     outline: none;
     font-size: 1em;
-    color: #6e8ca1;
+    color: #000000;
     font-weight: 600;
     padding: 0 35px 0 5px;
 }
@@ -233,7 +305,7 @@ header {
 
 .remember-fogot {
     font-size: .9em;
-    color: #6e8ca1;
+    color: #000000;
     font-weight: 500;
     margin: -15px 0 15px;
     display: flex;
@@ -241,12 +313,12 @@ header {
 }
 
 .remember-fogot label input {
-    accent-color: #6e8ca1;
+    accent-color: #000000;
     margin-right: 3px;
 }
 
 .remember-fogot a {
-    color: #4b9fff;
+    color: #72b2fc;
     text-decoration: none;
 }
 
@@ -269,7 +341,7 @@ header {
 
 .login-register {
     font-size: 1.2em;
-    color: #6e8ca1;
+    color: #000000;
     text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
@@ -277,7 +349,7 @@ header {
 }
 
 .login-register p a {
-    color: #4b9fff;
+    color: #72b2fc;
     text-decoration: none;
     font-weight: 600;
     
@@ -503,3 +575,6 @@ header {
 .skip-btn:hover {
     color: #ff0000; 
 }
+
+
+

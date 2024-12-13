@@ -178,3 +178,22 @@ showNextDialog();
 window.addEventListener("click", showNextDialog);
 
 skipButton.addEventListener("click", skipDialog);
+
+
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navigation = document.querySelector('.navigation');
+const navLinks = document.querySelectorAll('.navigation a'); // 將所有導航選項儲存為 NodeList
+
+// 點擊漢堡選單顯示或隱藏導航欄
+hamburgerMenu.addEventListener('click', () => {
+    navigation.classList.toggle('ok');
+});
+
+// 點擊導航選項後關閉漢堡選單
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navigation.classList.remove('ok'); // 移除 "ok" 類名，關閉漢堡選單
+    });
+});
+

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Website With Login And Register</title>
+    <title>Preorder</title>
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
     <link rel="icon" href="img/favicon.jpg">
     <link rel="stylesheet" href="mainstyle.css">
     <script src="register.js" defer></script>
@@ -15,18 +16,21 @@
 
 <body>
      <!-- N-A-V -->
-    <header>
+     <header>
         <a href="../index.html">
-        <img src="img/favc2.png" class="logo"></img>
+            <img src="img/LOGO4.png" class="logo"></img>
         </a>
         <nav class="navigation">
-            <a href="#">首頁</a>
+            <a href="#">引導</a>
             <a href="world.html">介紹</a>
-            <a href="#">支持</a>
-
+            <a href="#" class="support-link">支持</a>
             <button class="btnLogin-popup">預先註冊</button>
         </nav>
+        <button class="hamburger-menu">☰</button> <!-- 漢堡按鈕 -->
     </header>
+    
+
+
     
     <div class="wrapper">
         <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
@@ -99,6 +103,140 @@
         <button id="yes-button" class="skip-btn">是</button>
         <button id="no-button" class="skip-btn">否</button>
     </div>
+
+    <div class="LinkThree" >
+        <h1>Links</h1>
+        <br>
+        <center>
+        <div>
+            <span class="Link-close"><ion-icon name="close-outline"></ion-icon></span>
+        </div>
+            <a class="one" href=""><img src="img/" >TWITTER</a><br>
+        <a class="one" href=""><img src="" >TWITCH</a><br>
+        <a class="one" href=""><img src="" >PATREON</a><br>
+        <a class="one" href=""><img src="" >TRELLO</a><br>
+        <a class="one" href=""><img src="" >INSTAGRAM</a><br>
+        <a class="one" href=""><img src="" >NEOCITIES</a><br>
+        </center>
+    </div>
+</div>
+        <style>
+
+            .LinkThree {
+                position: absolute;
+                width: 500px;
+                height: 600px;
+                background: transparent;
+                border: 2px solid rgb(172, 172, 172);
+                border-radius: 20px;
+                backdrop-filter: blur(5px);
+                box-shadow: 0 0 30px black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transform: scale(0);
+                transition: transform .5s ease, height .2s ease;
+                z-index: 999;
+            }
+            .LinkThree .Link-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 45px;
+                height: 45px;
+                background: #162938;
+                font-size: 2em;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                cursor: pointer;
+                z-index: 1;
+            }
+
+            .LinkThree h1 {
+                position: relative;
+                top: -42%;
+                left: 26%;
+                color: #fff;
+            }
+
+            .LinkThree a {
+                position: relative;
+                top: 35px;
+                left: -14%;
+
+            }
+
+
+            .one {
+                display: block; /* 使 <a> 成為塊級元素 */
+                position: relative;
+                top: 10px;
+                width: 250px;
+                background-color: #fff;
+                text-decoration: none;
+                border: 2px solid #000;
+                border-radius: 20px;
+                margin-top: 10px; /* 增加上方間距 */
+                margin-bottom: 10px; /* 增加下方間距 */
+                padding: 10px; /* 可以調整內部間距 */
+            }
+
+            .LinkThree.open {
+                transform: scale(1); /* 顯示狀態 */
+            }
+            .LinkThree .Link-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 45px;
+                height: 45px;
+                background: #162938;
+                font-size: 2em;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                cursor: pointer;
+                z-index: 1;
+            }
+
+       
+
+        </style>
+        <script>
+            
+
+
+
+                // 選取 "支持" 按鈕和彈出框的相關元素
+                const supportLink = document.querySelector('.support-link'); // 綁定 "支持"
+                const linkOpen = document.querySelector('.LinkThree'); // 綁定彈出框
+                const linkClose = document.querySelector('.Link-close'); // 關閉按鈕
+
+                // 點擊 "支持" 開啟彈出框
+                supportLink.addEventListener('click', (event) => {
+                    event.preventDefault(); // 阻止默認行為（如跳轉）
+                    linkOpen.classList.add('open'); // 顯示彈出框
+                });
+
+                // 點擊關閉按鈕隱藏彈出框
+                linkClose.addEventListener('click', () => {
+                    linkOpen.classList.remove('open');
+                });
+
+                // 點擊外部區域關閉彈出框
+                document.addEventListener('click', (event) => {
+                    if (!linkOpen.contains(event.target) && event.target !== supportLink) {
+                        linkOpen.classList.remove('open');
+                    }
+                });
+
+        </script>
 
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
