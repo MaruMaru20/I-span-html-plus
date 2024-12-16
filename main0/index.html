@@ -51,6 +51,31 @@
   </div>
     <p></p>
 
+    <audio id="player" controls autoplay>
+      <source src="music(original)/00.Escape from the world.mp3" type="audio/mpeg">
+      您的瀏覽器不支援音頻播放。
+    </audio>
+    
+    <script>
+      // 設置音頻元素的初始音量
+      const audioElement = document.getElementById('player');
+      audioElement.volume = 0.35;  
+    </script>
+
+    <style>
+  #player {
+    position: absolute; /* 或 absolute */
+    bottom: 10%;
+    left: 10%;
+    opacity: .6;
+}
+@media (max-width: 768px) {
+      #player {
+          display: none;
+      }
+  }
+    </style>
+
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

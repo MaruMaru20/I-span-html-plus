@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音樂播放器彈窗</title>
+  <link href="https://cdn.jsdelivr.net/npm/@ionic/core@5.7.0/dist/ionic/ionic.css" rel="stylesheet" />
+  <style>
+    /* 音樂播放器樣式 */
+    #player {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none; /* 預設隱藏 */
+      padding: 10px;
+    }
+
+    #player audio {
+      width: 100%;
+    }
+
+    /* 主要導航 */
+    .navigation {
+      display: flex;
+      justify-content: space-around;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    .navigation a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .Music-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 導航欄 -->
+  <nav class="navigation">
+    <a href="main.html">主頁</a>
+    <a href="#" id="openMusic">原聲帶</a>
+    <a href="#" class="support-link">支持</a>
+    <button class="btnLogin-popup">預先註冊</button>
+  </nav>
+  <button class="hamburger-menu">☰</button> <!-- 漢堡按鈕 -->
+
+  <!-- 音樂播放器彈窗 -->
+  <div id="player">
+    <span class="Music-close"><ion-icon name="close-outline"></ion-icon></span>
+    <audio controls autoplay>
+      <source src="music.mp3" type="audio/mpeg">
+      您的瀏覽器不支援音頻播放。
+    </audio>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@ionic/core@5.7.0/dist/ionic/ionic.js"></script>
+  <script>
+    // 點擊原聲帶顯示播放器
+    document.getElementById('openMusic').addEventListener('click', function() {
+      document.getElementById('player').style.display = 'block'; // 顯示播放器
+    });
+
+    // 點擊關閉按鈕隱藏播放器
+    document.querySelector('.Music-close').addEventListener('click', function() {
+      document.getElementById('player').style.display = 'none'; // 隱藏播放器
+    });
+  </script>
+
+</body>
+</html>

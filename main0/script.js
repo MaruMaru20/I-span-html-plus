@@ -58,7 +58,7 @@ function createFireflies(numFireflies) {
   }
 
 
-  createFireflies(50);  //50隻蟲蟲
+  createFireflies(100);  //100隻蟲蟲
 
 
 

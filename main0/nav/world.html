@@ -22,7 +22,7 @@
         </a>
         <nav class="navigation">
             <a href="main.html">主頁</a>
-            <a href="world.html">介紹</a>
+            <a href="#" id="showSoundtrack">原聲帶</a>
             <a href="#" class="support-link">支持</a>
             <button class="btnLogin-popup">預先註冊</button>
         </nav>
@@ -95,16 +95,127 @@
     <div>
         <span class="Link-close"><ion-icon name="close-outline"></ion-icon></span>
     </div>
-        <a class="one" href=""><img src="" >TWITTER</a><br>
+    <a class="one" href=""><img src="" >Buy Soundtrack</a><br>
+    <a class="one" href=""><img src="" >TWITTER</a><br>
     <a class="one" href=""><img src="" >TWITCH</a><br>
     <a class="one" href=""><img src="" >PATREON</a><br>
-    <a class="one" href=""><img src="" >TRELLO</a><br>
+    
     <a class="one" href=""><img src="" >INSTAGRAM</a><br>
     <a class="one" href=""><img src="" >NEOCITIES</a><br>
     </center>
 </div>
+
+
+
+
+
  <!-- LINKTREE -->
 
+ <audio id="audioPlayer" controls >
+    <source id="audioSource" src="music/03.Fight fighters.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+
+
+<!-- Soundtrack Section -->
+<div class="soundtrack" id="soundtrackPanel">
+    <h1>原聲帶</h1>
+    <br>
+    <center>
+    <div>
+        <span class="Link-close" id="closeSoundtrack"><ion-icon name="close-outline"></ion-icon></span>
+    </div>
+
+    <!-- 音轨列表 -->
+    <div class="track">
+        <button class="trackButton" onclick="changeTrack('music/01.Welcome to my world.mp3', 'Welcome to my world')">Welcome to my world</button>
+    </div>
+    <div class="track">
+        <button class="trackButton" onclick="changeTrack('music/02.Sup beautiful day.mp3', 'Sup beautiful day')">Sup beautiful day</button>
+    </div>
+    <div class="track">
+        <button class="trackButton" onclick="changeTrack('music/03.Fight fighters.mp3', 'Fight fighters')">Fight fighters</button>
+    </div>
+    <div class="track">
+        <button class="trackButton" onclick="changeTrack('music/04.Darkness fall.mp3', 'Darkness fall')">Darkness fall</button>
+    </div>
+    <div class="track">
+        <button class="trackButton" onclick="changeTrack('music/05.Last fight.mp3', 'Last fight')">Last fight</button>
+    </div>
+    <div class="track">
+        <button class="trackButton" onclick="changeTrack('music/06.Happy pond.mp3', 'Happy pond')">Happy pond</button>
+    </div>
+    <div class="track">
+        <button class="trackButton" onclick="changeTrack('music/00.Escape from the world.mp3', 'Escape from the world')">Escape from the world</button>
+    </div>
+    </center>
+</div>
+<script>
+    // 显示原声带面板
+    document.getElementById('showSoundtrack').addEventListener('click', function(e) {
+        e.preventDefault();
+        var soundtrackPanel = document.getElementById('soundtrackPanel');
+        soundtrackPanel.style.display = 'block'; // 显示面板
+        setTimeout(function() { // 使用延时确保面板动画生效
+            soundtrackPanel.style.transform = 'scale(1)';
+        }, 10);
+    });
+
+    // 关闭原声带面板
+    document.getElementById('closeSoundtrack').addEventListener('click', function() {
+        var soundtrackPanel = document.getElementById('soundtrackPanel');
+        soundtrackPanel.style.transform = 'scale(0)'; // 关闭面板
+        setTimeout(function() { // 使用延时确保动画生效
+            soundtrackPanel.style.display = 'none'; // 隐藏面板
+        }, 500); // 动画时长
+    });
+
+    // 点击面板外部也关闭
+    document.addEventListener('click', function(event) {
+        var soundtrackPanel = document.getElementById('soundtrackPanel');
+        var showSoundtrack = document.getElementById('showSoundtrack');
+        if (!soundtrackPanel.contains(event.target) && event.target !== showSoundtrack) {
+            soundtrackPanel.style.transform = 'scale(0)'; // 关闭面板
+            setTimeout(function() {
+                soundtrackPanel.style.display = 'none'; // 隐藏面板
+            }, 500);
+        }
+    });
+
+    // 播放选中的音乐
+    function changeTrack(trackUrl, trackName) {
+        var audioPlayer = document.getElementById('audioPlayer');
+        var audioSource = document.getElementById('audioSource');
+        
+        // 设置音量为40%
+        audioPlayer.volume = 0.4;
+
+        // 更换音频文件
+        audioSource.src = trackUrl;
+        audioPlayer.load(); // 重新加载音频
+        audioPlayer.play(); // 播放新音轨
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 's' || event.key === 'S') {
+            var audioPlayer = document.getElementById('audioPlayer');
+            if (audioPlayer.style.transform === 'scale(1)') {
+               
+                audioPlayer.style.transform = 'scale(0)';
+            } else {
+                
+                audioPlayer.style.transform = 'scale(1)';
+            }
+        }
+    });
+</script>
+
+
+
+
+
+ 
     <div class="banner">
         <div class="slider" id="slider" style="--quantity: 10">
             <div class="item" style="--position: 1"><img src="img/Raido1.png" alt=""></div>
@@ -242,7 +353,6 @@ document.addEventListener('click', function(event) {
     </script>
 
 
-    
 </body>
 <style>
 

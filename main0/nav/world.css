@@ -207,10 +207,95 @@ pre {
 }
 
 
+/* TRACK----------------------- */
+#audioPlayer  {
+    position: absolute; /* 或 absolute */
+    TOP: 03%;
+    left: 10%;
+    opacity: .8;
+    z-index: 999;
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+
+}
+
+.soundtrack {
+    position: absolute;
+    left: 37%;
+    top: 20%;
+    width: 500px;
+    height: 600px;
+    background: transparent;
+    border: 2px solid rgb(172, 172, 172);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px black;
 
 
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+    z-index: 999;
+}
+.soundtrack .Link-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.soundtrack h1 {
+    position: relative;
+    left: 40%;
+    color: #fff;
+}
+
+.track {
+
+    display: block; /* 使 <a> 成為塊級元素 */
+    position: relative;
+    top: 10px;
+    width: 250px;
+    background-color: antiquewhite;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin-top: 10px; /* 增加上方間距 */
+    margin-bottom: 100px; /* 增加下方間距 */
+    padding: 10px; /* 可以調整內部間距 */
+
+}
+
+.trackButton {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 
+/* Hover effect: change text color and underline */
+.trackButton:hover {
+    color: #FF6347; /* Change text color (Tomato color for example) */
+    text-decoration: underline;
+}
+
+.track {
+    margin: 20px 0;
+}
 
 
 
@@ -294,18 +379,25 @@ pre {
 
 
 /* nav */
-.btnLogin-popup {
-    position: relative;
-}
+
 /* --nav */
 
 
 @media (max-width: 768px) {
     .LinkThree {
-        left: 10%;
+        left: 0%;
+        
+    }
+    .soundtrack {
+        left: 0%;
+    }
+
+    #audioPlayer {
+        display: none;
         
     }
 
+    
 
     .banner .extra {
         
@@ -417,7 +509,7 @@ pre {
 
     .banner .content h1 {
         font-size: 8em;
-        top: 2000px;
+        top: 200px;
 
     }
 

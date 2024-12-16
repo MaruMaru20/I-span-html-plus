@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (previousIndex !== null) {
                 contentModel.classList.add('hidden');
                 setTimeout(() => {
-                    contentModel.style.backgroundImage = `url(${img/algiz3.png})`; // 恢復初始圖片
+                    contentModel.style.backgroundImage = `url(${contentData[0].model})`; // 恢復初始圖片
                     contentModel.classList.remove('hidden');
                 }, 500); // 等待淡出動畫完成
             }

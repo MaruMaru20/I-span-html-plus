@@ -52,10 +52,11 @@ document.addEventListener('click', function(event) {
 
 
 const dialogTexts = [
-    "這是第一段對話內容。",
-    "這是第二段對話內容。",
-    "這是第三段對話內容。",
-    "這是最後一段對話，點擊完成。",
+    "你好~我是旅人部族的萊多",
+    "歡迎來到我的城市",
+    "現在就由我來引導你吧",
+    "但其實．也沒啥好引導的",
+    "不如就隨意逛逛吧．．．．．",
 ];
 
 let currentDialogIndex = 0;

@@ -385,7 +385,7 @@ header {
     position: absolute;
     left: 70%;
     max-width: 40%; 
-    max-height: 44%; 
+    max-height: 52%; 
     z-index: 3; 
     opacity: 1;
 }
@@ -419,6 +419,7 @@ header {
 
 .person {
     z-index: 2; /* 中間層 */
+    
 }
 
 .content {
