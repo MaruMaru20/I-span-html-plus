@@ -11,9 +11,9 @@ HTML
 CSS
 JavaScript
 
-# 頁面與功能:
 
-X.全站功能:
+
+# 全站功能:
 - RWD 
 - 音樂撥放器
 
