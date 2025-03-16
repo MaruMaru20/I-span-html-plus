@@ -1,4 +1,4 @@
-# C#班級 小專題 目標: 製作遊系前導網站
+# C#班級 小專題 目標: 製作遊戲前導網站
 
 # 專題簡報:
 https://www.canva.com/design/DAGZeBmEMBE/ROqSoXGDH-SARb-LbgvOjQ/view?utm_content=DAGZeBmEMBE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hce8d036960
